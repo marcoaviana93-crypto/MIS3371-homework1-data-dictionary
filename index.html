@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--Images-->
+    <img src="/Images/Healtcare Logo.png" alt="Clinic's Logo">
+    <!--"Program name: registrationForm.html
+        Author: Marco Viana Urrutia
+        Date created: Feb/20/2026 
+        Date last edited: The date you submitted it
+        Version: 3.0
+        Description: This is an intake form for new patients-->
+    <title>PSC</title>
+<body>
+  <header>
+  <div class="top">
+    <h1>Patient Intake Form</h1>
+  </div>
+  </header>
+
+  
+  <div class="middle">
+    <!-- This should be a function that we will add in the near future -->
+    <form action="Information has been sent.html">
+      <table>
+        <tr>
+          <td>
+            <label for="firstName">First Name</label>
+            <input id="firstName" name="firstName" type="text" maxlength="30" required/>
+          </td>
+
+          <td>
+            <label for="middleInitial">Middle Initial</label>
+            <input id="middleInitial" name="middleInitial" type="text" maxlength="1" />
+          </td>
+
+          <td>
+            <label for="lastName">Last Name</label>
+            <input id="lastName" name="lastName" type="text" maxlength="30" required />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="dob">Date of Birth (MM/DD/YYYY)</label>
+            <input
+              id="dob"
+              name="dob"
+              type="text"
+              placeholder="MM/DD/YYYY"
+              required>
+          </td>
+
+          <td colspan="2">
+            <label for="ssn">Social Security</label>
+            <input
+              id="ssn"
+              name="ssn"
+              type="text"
+              placeholder="***-**-****"
+              minlength="9"
+              maxlength="11"
+              required
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <label for="addr1">Address Line 1</label>
+            <input id="addr1" name="addr1" type="text" maxlength="30" required />
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <label for="addr2">Address Line 2</label>
+            <input id="addr2" name="addr2" type="text" maxlength="30" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" maxlength="30" required />
+          </td>
+
+          <td>
+            <label for="state">State</label>
+            <select id="state" name="state" required>
+              <option value="">-- Select --</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="DC">District of Columbia</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+              <option value="PR">Puerto Rico</option>
+            </select>
+          </td>
+
+          <td>
+            <label for="zip">Zip Code</label>
+            <input
+              id="zip"
+              name="zip"
+              type="text"
+              minlength="5"
+              maxlength="10"/>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="yourname@yahoo.com" required />
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <label for="symptoms">Describe your current symptoms</label>
+            <textarea id="symptoms" name="symptoms" rows="3" cols="50" placeholder="Describe symptoms here..." required></textarea>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <fieldset>
+              <legend>Select all that apply</legend>
+
+              <div class="inline-group">
+                <div>
+                  <label><input type="checkbox" name="history" value="asthma" /> Asthma</label><br />
+                  <label><input type="checkbox" name="history" value="diabetes" /> Diabetes</label><br />
+                  <label><input type="checkbox" name="history" value="hypertension" /> High Blood Pressure</label>
+                </div>
+                <div>
+                  <label><input type="checkbox" name="history" value="allergies" /> Allergies</label><br />
+                  <label><input type="checkbox" name="history" value="heart_disease" /> Heart Disease</label><br />
+                  <label><input type="checkbox" name="history" value="migraine" /> Migraines</label>
+                </div>
+              </div>
+            </fieldset>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <fieldset>
+              <legend>Basic Information</legend>
+
+              <div class="inline-group">
+                <div>
+                  <label>Gender</label><br />
+                  <label><input type="radio" name="gender" value="male" required /> Male</label><br />
+                  <label><input type="radio" name="gender" value="female" /> Female</label><br />
+                  <label><input type="radio" name="gender" value="other" /> Other</label>
+                </div>
+
+                <div>
+                  <label>Vaccinated?</label><br />
+                  <label><input type="radio" name="vaccinated" value="yes" required /> Yes</label><br />
+                  <label><input type="radio" name="vaccinated" value="no" /> No</label>
+                </div>
+
+                <div>
+                  <label>Do you have insurance?</label><br />
+                  <label><input type="radio" name="insured" value="yes" required /> Yes</label><br />
+                  <label><input type="radio" name="insured" value="no" /> No</label>
+                </div>
+              </div>
+            </fieldset>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <label for="healthScale">On a scale of 1 to 10 (10 being the worst), how is your pain?</label>
+            <input id="healthScale" name="healthScale" type="range" min="1" max="10" value="5" />
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <label for="userId">Desired User ID</label>
+            <input id="userId" name="userId" type="text" maxlength="20" required />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required />
+          </td>
+          <td colspan="2">
+            <label for="password2">Re-enter Password</label>
+            <input id="password2" name="password2" type="password" required />
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <div class="actions">
+              <button type="save" onclick="alert('Information have been saved')">Save and Finish Later</button>
+              <button type="submit" onclick="alert('Thank you for submiting your information')">Submit</button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <!-- Footer -->
+<footer>
+  <div class="bottom">
+    <div>
+      <button type="button" onclick="alert('Phone Number: (555) 123-4567')">Contact Us</button>
+    </div>
+    <p class="hint">&copy; 2026 Patient's Solutions Clinic</p>
+  </div>
+  </footer>
+</body> 
+</html>
